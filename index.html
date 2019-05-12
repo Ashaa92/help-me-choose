@@ -11,8 +11,22 @@
       <div class="inputs">
         <input placeholder="Something"</input>
       </div>
+      <div class="resultSection"></div>
       <button class="addoption">Add</button>
     </div>
     <button>Go!</button>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function() {
+        $('.resultSection').hide()
+
+        var add_option = function() {
+          $('.inputs').append('<input></input>')
+        }
+
+        $('.addoption').click(add_option)
+      })
+    </script>
   </body>
 </html>
